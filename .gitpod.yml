@@ -1,0 +1,7 @@
+# GitPod Workspace image to use
+image: gitpod/workspace-python
+
+tasks:
+  - name: Upgrade pip and outdated packages 
+    init: |
+      python -m pip install --upgrade pip
