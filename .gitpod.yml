@@ -5,3 +5,6 @@ tasks:
   - name: Upgrade pip and outdated packages 
     init: |
       python -m pip install --upgrade pip
+      command -v cookiecutter >/dev/null 2>&1 && {
+        pip install cookiecutter
+      }
