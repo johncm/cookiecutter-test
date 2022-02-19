@@ -1,5 +1,5 @@
 # GitPod Workspace image to use
-image: gitpod/workspace-python
+image: gitpod/workspace-full
 
 tasks:
   - name: Upgrade pip and outdated packages 
