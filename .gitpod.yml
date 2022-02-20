@@ -11,3 +11,11 @@ tasks:
       command -v hub >/dev/null 2>&1 || {
         brew install hub || exit 0
       }
+      command -v gh >/dev/null 2>&1 || {
+        brew install gh || exit 0
+      }
+    # Show version
+    command: |
+      pip --version
+      hub --version
+      gh --version
