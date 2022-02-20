@@ -8,3 +8,6 @@ tasks:
       command -v cookiecutter >/dev/null 2>&1 || {
         pip install --quiet --user cookiecutter || exit 0
       }
+      command -v hub >/dev/null 2>&1 || {
+        brew install hub || exit 0
+      }
