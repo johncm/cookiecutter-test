@@ -10,5 +10,5 @@ tasks:
     command: |
       pip --version
       cookiecutter --version
-      hub version
-      gh version
+      hub --version
+      gh --version
