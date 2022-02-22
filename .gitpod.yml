@@ -1,24 +1,14 @@
 # GitPod Workspace image to use
-image: gitpod/workspace-full
+image:
+  file: .gitpod.Dockerfile
 
 tasks:
   - name: Upgrade pip and outdated packages 
     init: |
       python -m pip install --upgrade pip
-      command -v cookiecutter >/dev/null 2>&1 || {
-        echo "pip upgrade"
-        # pip install --quiet --user cookiecutter || exit 0
-      }
     # Show version
     command: |
       pip --version
-      command -v hub >/dev/null 2>&1 || {
-        echo "hub install"
-        # brew install hub || exit 0
-      }
-      hub --version
-      command -v gh >/dev/null 2>&1 || {
-        echo "gh install"
-        # brew install gh || exit 0
-      }
-      gh --version
+      cookiecutter --version
+      hub version
+      gh version
