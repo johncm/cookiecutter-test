@@ -6,16 +6,16 @@ tasks:
     init: |
       python -m pip install --upgrade pip
       command -v cookiecutter >/dev/null 2>&1 || {
-        pip install --quiet --user cookiecutter || exit 0
+        # pip install --quiet --user cookiecutter || exit 0
       }
     # Show version
     command: |
       pip --version
       command -v hub >/dev/null 2>&1 || {
-        brew install hub || exit 0
+        # brew install hub || exit 0
       }
       hub --version
       command -v gh >/dev/null 2>&1 || {
-        brew install gh || exit 0
+        # brew install gh || exit 0
       }
       gh --version
