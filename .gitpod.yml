@@ -1,12 +1,12 @@
 # GitPod Workspace image to use
-image:
-  file: .gitpod.Dockerfile
+# image:
+#   file: .gitpod.Dockerfile
 
 tasks:
   - name: Upgrade pip and outdated packages 
     init: |
       python -m pip install --upgrade pip
-      brew up
+      HOMEBREW_NO_ENV_HINTS=1 brew update
       HOMEBREW_NO_ENV_HINTS=1 brew install cookiecutter gh hub
     # Show version
     command: |
