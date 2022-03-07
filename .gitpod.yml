@@ -6,6 +6,7 @@ tasks:
   - name: Upgrade pip and outdated packages 
     init: |
       python -m pip install --upgrade pip
+      brew up
       HOMEBREW_NO_ENV_HINTS=1 brew install cookiecutter gh hub
     # Show version
     command: |
